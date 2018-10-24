@@ -1,0 +1,30 @@
+package br.com.fiap.common;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.Avaliacao;
+
+@Stateless
+public class AvaliacaoBean implements Avaliacao {
+	
+	@Override
+	public List obterQuestoes(int codigoAvaliacao) {
+		
+		List <String> list = new ArrayList<String>();
+		
+		list.add("a");
+		list.add("b");
+		
+		return list;
+	}
+
+	@Override
+	public void removerEJB() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}

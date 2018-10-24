@@ -1,0 +1,15 @@
+package br.com.fiap.common;
+
+import javax.persistence.EntityManager;
+
+public class Dao {
+	
+	private EntityManager em;
+	
+	public Dao(EntityManager em) {
+		this.em = em;
+	}
+	
+	
+
+}

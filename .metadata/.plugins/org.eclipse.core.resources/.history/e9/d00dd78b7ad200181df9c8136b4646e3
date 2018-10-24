@@ -1,0 +1,39 @@
+package br.com.fiap.common;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.jws.WebService;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
+
+import br.com.fiap.Avaliacao;
+
+@Stateless
+@WebService(name="WebServiceAvaliacao")
+public class AvaliacaoBean implements Avaliacao {
+	
+	@PersistenceContext(name="fiapPU")
+	private EntityManager em;
+	
+	private Dao dao;
+	
+	@Override
+	public List obterQuestoes(int codigoAvaliacao) {
+		
+		List <String> list = new ArrayList<String>();
+		
+		list.add("a");
+		list.add("b");
+		
+		return list;
+	}
+
+	@Override
+	public void removerEJB() {
+		// TODO Auto-generated method stub
+		
+	}
+}

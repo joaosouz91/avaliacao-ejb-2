@@ -1,0 +1,6 @@
+
+_squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬¿ª§è,HŒRMINORZVULNERABILITY
+_squid:S1168"+Return an empty collection instead of null.(¥¹ï8¹º«§è,HRMAJORZ
+CODE_SMELL
+^squid:S1181"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8¬¿ª§è,HRMAJORZ
+CODE_SMELL
