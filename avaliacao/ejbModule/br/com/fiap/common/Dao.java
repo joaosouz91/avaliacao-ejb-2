@@ -12,10 +12,10 @@ public class Dao {
 		this.em = em;
 	}
 
-	public List getListByQuery() {
+	public List<Questao> getListByQuery() {
 
 		try {
-			return em.createNativeQuery("SELECT * FROM QUESTAO").getResultList();
+			return em.createNativeQuery("SELECT * FROM QUESTAO", Questao.class).getResultList();
 		} catch (Throwable e) {
 			e.printStackTrace();
 			return null;

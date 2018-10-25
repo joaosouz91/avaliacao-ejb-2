@@ -1,0 +1,39 @@
+package br.com.fiap.common;
+
+import javax.persistence.Column;
+
+public class QuestaoVO {
+	
+	private Integer id;
+
+	private Integer codigoAvaliacao;
+
+	private String descricao;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getCodigoAvaliacao() {
+		return codigoAvaliacao;
+	}
+
+	public void setCodigoAvaliacao(Integer codigoAvaliacao) {
+		this.codigoAvaliacao = codigoAvaliacao;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	
+	
+
+}

@@ -1,0 +1,15 @@
+package br.com.fiap;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import br.com.fiap.common.Questao;
+
+@Remote
+public interface Avaliacao {
+
+	public List<Questao> obterQuestoes(int codigoAvaliacao);
+
+	public void removerEJB();
+}

@@ -1,0 +1,16 @@
+package br.com.fiap.common;
+
+import javax.persistence.Column;
+
+public class QuestaoVO {
+	
+	private Integer id;
+
+	private Integer codigoAvaliacao;
+
+	@Column(name = "descricao")
+	private String descricao;
+	
+	
+
+}

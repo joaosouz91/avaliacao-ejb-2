@@ -1,5 +1,6 @@
 package br.com.fiap.common;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -27,8 +28,15 @@ public class AvaliacaoBean implements Avaliacao {
 	}
 	
 	@Override
-	public List obterQuestoes(int codigoAvaliacao) {
-		return (List<Questao>) dao.getListByQuery();
+	public List<QuestaoVO> obterQuestoes(int codigoAvaliacao) {
+		
+		List<QuestaoVO> questoes = new ArrayList<QuestaoVO>();
+		
+		for(Questao q : dao.getListByQuery()) {
+			questoes.add(new QuestaoVO(q.getId(), q.getCodigoAvaliacao(), q.getDescricao()));
+		}
+		
+		return questoes;
 	}
 
 	@Override
