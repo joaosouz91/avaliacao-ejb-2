@@ -31,9 +31,16 @@ public class AvaliacaoBean implements Avaliacao {
 	public List<QuestaoVO> obterQuestoes(int codigoAvaliacao) {
 		
 		List<QuestaoVO> questoes = new ArrayList<QuestaoVO>();
+		List<Resposta> respostas = new ArrayList<Resposta>();
+		String respostasString = new String();
 		
 		for(Questao q : dao.getListByQuery()) {
-			questoes.add(new QuestaoVO(q.getId(), q.getCodigoAvaliacao(), q.getDescricao()));
+			respostas = (List<Resposta>) q.getRespostas();
+			for (int i = 0; i < respostas.size(); i++) {
+				respostasString += ((respostas.get(i).getId()) + " - " + respostas.get(i).getDescricao() + "\n");
+			}
+			questoes.add(new QuestaoVO(q.getId(), q.getCodigoAvaliacao(), q.getDescricao(), respostas, respostasString));
+			respostasString = new String();
 		}
 		
 		return questoes;
@@ -41,7 +48,5 @@ public class AvaliacaoBean implements Avaliacao {
 
 	@Override
 	@Transient
-	public void removerEJB() {
-		
-	}
+	public void removerEJB() {}
 }
