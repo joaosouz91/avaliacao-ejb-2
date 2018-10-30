@@ -4,7 +4,7 @@
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
 <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
 <fullyQualifiedTypeName name="javax.persistence.Transient"/>
+<fullyQualifiedTypeName name="br.com.fiap.common.QuestaoVO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="br.com.fiap.common.QuestaoVO"/>
 </qualifiedTypeNameHistroy>
